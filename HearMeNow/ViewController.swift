@@ -60,6 +60,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                 print("Error initializing player \(error)")
             }
             soundPlayer?.delegate = self
+            soundPlayer?.enableRate = true
+            soundPlayer?.rate = 0.5
             soundPlayer?.play()
             
             playButton.setTitle("Pause", forState: UIControlState.Normal)
